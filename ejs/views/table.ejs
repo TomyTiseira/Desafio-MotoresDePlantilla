@@ -1,0 +1,27 @@
+<div class="container">
+  <br>
+  <% if(products.length === 0) { %>
+    <h2 style="color:red">No se encontraron datos</h2>
+  <% } else { %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Thumbnail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach((product) => { %>
+        <tr>
+          <th scope="row"><%= product.id %></th>
+          <td><%= product.name %></td>
+          <td><%= product.price %></td>
+          <td><%= product.thumbnail %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  <% } %>
+  </table>
+</div>

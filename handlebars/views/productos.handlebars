@@ -1,0 +1,25 @@
+{{#if products}}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Thumbnail</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each products}}
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{name}}</td>
+            <td>{{price}}</td>
+            <td>{{thumbnail}}
+            </td>
+          </tr>
+      </tbody>
+      {{/each}}
+  </table>
+{{else}}
+  <h2 style="color:red">No se encontraron datos</h2>
+{{/if}}
