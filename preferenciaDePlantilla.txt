@@ -1,1 +1,5 @@
-En lo personal, me resultaron complicados todos en un principio, pero luego de prueba y error, además, de buscar por internet, no me fue díficil comprender e implementar los motores de plantilla "ejs" y "handlebars". En cambio, "pug" me presentó mucha dificiltad por su sintaxis. "ejs" y "handlebars" son muy simulares a HTML, en el cual me sé desempeñar. 
+En lo personal, me resultaron complicados todos en un principio, pero luego de prueba y error, además, de buscar por internet.
+No me fue díficil comprender e implementar los motores de plantilla "ejs" y "handlebars". En cambio, "pug" me presentó mucha dificiltad por su sintaxis. 
+"ejs" y "handlebars" son muy simulares a HTML, en el cual tengo conocimientos. 
+Entre "ejs" y "handlebars" es mucho más fácil comprender e implementar "handlebars" por su simplicidad al declarar condicionales, bucles, etcétera. 
+Por esto, prefiero el motor de plantilla "handlebars".
