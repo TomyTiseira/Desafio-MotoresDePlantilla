@@ -13,13 +13,12 @@
         <tr>
             <th scope="row">{{id}}</th>
             <td>{{name}}</td>
-            <td>{{price}}</td>
-            <td>{{thumbnail}}
-            </td>
+            <td>${{price}}</td>
+            <td><img src={{thumbnail}} alt={{name}} style="height: 50px; width: 50px;"></td>
           </tr>
       </tbody>
       {{/each}}
   </table>
 {{else}}
-  <h2 style="color:red">No se encontraron datos</h2>
+  <h2 style="color:red">No hay productos</h2>
 {{/if}}

@@ -1,6 +1,20 @@
 extend layout.pug
 block productos
-  if products
-    h2 hola
+  if products.length !== 0
+    table.table
+      thead
+        tr
+          th(scope='col') #
+          th(scope='col') Name
+          th(scope='col') Price
+          th(scope='col') Thumbnail
+      tbody
+      each product in products
+        tr
+          th(scope='row')=product.id
+          td=product.name
+          td=product.price
+          td
+            img(src=product.thumbnail alt=product.name style='height: 50px; width: 50px')
   else
-    h2 No se encontraron datos
+    h2(style='color:red') No hay productos

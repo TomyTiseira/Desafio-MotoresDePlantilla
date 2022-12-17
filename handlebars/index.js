@@ -11,18 +11,30 @@ app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
 app.set("views", "./views");
 
+// Products array initialization.
 const products = [];
+let error = false;
 
+// Get all products from products array.
 productsRouter.get("/", (req, res) => {
   res.render("productos", {
     products,
+    error,
   });
 });
 
+// Add product in products array.
 productsRouter.post("/", (req, res) => {
   const { name, price, thumbnail } = req.body;
-  const id = products ? products.length + 1 : 1;
-  products.push({ name, price, thumbnail, id });
+  error = false;
+
+  if (name && price && thumbnail) {
+    const id = products ? products.length + 1 : 1;
+    products.push({ name, price, thumbnail, id });
+  } else {
+    error = true;
+  }
+
   res.redirect("/productos");
 });
 

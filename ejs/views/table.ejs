@@ -1,7 +1,7 @@
 <div class="container">
-  <br>
+  <hr>
   <% if(products.length === 0) { %>
-    <h2 style="color:red">No se encontraron datos</h2>
+    <h2 style="color:red">No hay productos</h2>
   <% } else { %>
   <table class="table">
     <thead>
@@ -17,8 +17,8 @@
         <tr>
           <th scope="row"><%= product.id %></th>
           <td><%= product.name %></td>
-          <td><%= product.price %></td>
-          <td><%= product.thumbnail %></td>
+          <td>$<%= product.price %></td>
+          <td><img src="<%= product.thumbnail %>" alt="<%= product.name %>" style="height: 50px; width: 50px;"></td>
         </tr>
       <% }) %>
     </tbody>

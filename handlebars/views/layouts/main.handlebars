@@ -23,6 +23,9 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    {{#if error}}
+      <h2 style="color:red">Complete todos los campos</h2>
+    {{/if}}
 
     <hr>
     {{{body}}}
